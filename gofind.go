@@ -43,9 +43,7 @@ func fileSearcher(myFile string, myStr string) {
 	}
 
 	defer f.Close()
-
 	scanner := bufio.NewScanner(f)
-	//fmt.Println(&scanner, "buffon")
 
 	for scanner.Scan() {
 
@@ -145,6 +143,7 @@ func main() { // search for string [Arg1] in folder [Arg2]
 			myF := getFilesTyp(targetFileType)
 			for _, f := range myF {
 				fileSearcher(f, argsUno)
+
 			}
 
 		} else {
